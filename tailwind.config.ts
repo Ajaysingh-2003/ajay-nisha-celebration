@@ -70,25 +70,51 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'50%': { transform: 'translateY(-20px) rotate(5deg)' }
+				},
+				'bounce-gentle': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'confetti-fall': {
+					'0%': { transform: 'translateY(-100vh) rotate(0deg)', opacity: '1' },
+					'100%': { transform: 'translateY(100vh) rotate(360deg)', opacity: '0' }
+				},
+				'sparkle': {
+					'0%, 100%': { opacity: '0', transform: 'scale(0)' },
+					'50%': { opacity: '1', transform: 'scale(1)' }
+				},
+				'glow-pulse': {
+					'0%, 100%': { boxShadow: '0 0 30px hsl(320 85% 65% / 0.3)' },
+					'50%': { boxShadow: '0 0 50px hsl(320 85% 65% / 0.5)' }
+				},
+				'balloon-sway': {
+					'0%, 100%': { transform: 'translateX(0) rotate(-2deg)' },
+					'50%': { transform: 'translateX(10px) rotate(2deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
+				'confetti': 'confetti-fall 3s linear infinite',
+				'sparkle': 'sparkle 2s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
+				'balloon-sway': 'balloon-sway 4s ease-in-out infinite'
+			},
+			fontFamily: {
+				'dancing': ['Dancing Script', 'cursive'],
+				'inter': ['Inter', 'sans-serif']
 			}
 		}
 	},

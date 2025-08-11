@@ -2,41 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Birthday celebration design system with vibrant gradients and animations */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors for birthday theme */
+    --background: 340 100% 98%;
+    --foreground: 340 30% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 340 100% 99%;
+    --card-foreground: 340 30% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 340 100% 99%;
+    --popover-foreground: 340 30% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Vibrant birthday palette */
+    --primary: 320 85% 65%;
+    --primary-foreground: 340 100% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 200 85% 75%;
+    --secondary-foreground: 340 30% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 60 70% 92%;
+    --muted-foreground: 340 20% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 80% 80%;
+    --accent-foreground: 340 30% 15%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 340 100% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 340 50% 90%;
+    --input: 340 50% 95%;
+    --ring: 320 85% 65%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Birthday celebration gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(340 85% 88%) 0%, hsl(320 80% 85%) 25%, hsl(200 85% 85%) 50%, hsl(280 75% 88%) 75%, hsl(60 80% 88%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(20 90% 85%) 0%, hsl(340 85% 88%) 100%);
+    --gradient-sky: linear-gradient(135deg, hsl(200 85% 85%) 0%, hsl(280 75% 88%) 100%);
+    --gradient-mint: linear-gradient(135deg, hsl(150 70% 85%) 0%, hsl(60 80% 88%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(340 90% 96%) 0%, hsl(320 80% 92%) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(320 85% 65%) 0%, hsl(280 80% 70%) 100%);
+    --gradient-interactive: linear-gradient(135deg, hsl(200 85% 75%) 0%, hsl(150 70% 75%) 100%);
+
+    /* Celebration shadows */
+    --shadow-magical: 0 10px 40px -10px hsl(320 85% 65% / 0.3);
+    --shadow-card: 0 8px 30px -8px hsl(340 50% 70% / 0.2);
+    --shadow-button: 0 6px 20px -6px hsl(320 85% 65% / 0.4);
+    --shadow-glow: 0 0 30px hsl(320 85% 65% / 0.3);
+
+    /* Animation variables */
+    --transition-magical: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +120,103 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+@layer components {
+  /* Celebration animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+
+  @keyframes bounce-gentle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes confetti-fall {
+    0% { 
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% { 
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: var(--shadow-glow); }
+    50% { box-shadow: 0 0 50px hsl(320 85% 65% / 0.5); }
+  }
+
+  @keyframes slide-up {
+    from { 
+      opacity: 0; 
+      transform: translateY(30px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+  @keyframes balloon-sway {
+    0%, 100% { transform: translateX(0) rotate(-2deg); }
+    50% { transform: translateX(10px) rotate(2deg); }
+  }
+
+  /* Animation utility classes */
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-bounce-gentle { animation: bounce-gentle 2s ease-in-out infinite; }
+  .animate-confetti { animation: confetti-fall 3s linear infinite; }
+  .animate-sparkle { animation: sparkle 2s ease-in-out infinite; }
+  .animate-glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
+  .animate-slide-up { animation: slide-up 0.8s ease-out; }
+  .animate-balloon-sway { animation: balloon-sway 4s ease-in-out infinite; }
+
+  /* Gradient backgrounds */
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-sunset { background: var(--gradient-sunset); }
+  .bg-gradient-sky { background: var(--gradient-sky); }
+  .bg-gradient-mint { background: var(--gradient-mint); }
+  .bg-gradient-card { background: var(--gradient-card); }
+  .bg-gradient-button { background: var(--gradient-button); }
+  .bg-gradient-interactive { background: var(--gradient-interactive); }
+
+  /* Custom shadows */
+  .shadow-magical { box-shadow: var(--shadow-magical); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-button { box-shadow: var(--shadow-button); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+
+  /* Interactive elements */
+  .celebration-button {
+    @apply bg-gradient-button text-primary-foreground font-semibold px-8 py-4 rounded-full shadow-button;
+    @apply hover:scale-110 hover:shadow-glow active:scale-95;
+    transition: var(--transition-bounce);
+  }
+
+  .magic-card {
+    @apply bg-gradient-card rounded-3xl p-8 shadow-card;
+    @apply hover:scale-105 hover:shadow-magical;
+    transition: var(--transition-magical);
+  }
+
+  .balloon {
+    @apply w-16 h-20 rounded-full shadow-lg cursor-pointer;
+    @apply hover:scale-110 active:scale-90;
+    transition: var(--transition-bounce);
   }
 }
