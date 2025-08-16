@@ -30,11 +30,11 @@ const HeroSection = () => {
         </div>
       )}
 
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+      <div className="max-w-3xl mx-auto text-center relative z-10">
         {/* Main birthday message */}
         <div className="animate-slide-up">
           <h1 className="font-dancing text-6xl md:text-8xl font-bold text-primary mb-4">
-            Happy Birthday, Nisha! 🎉
+            Happy Birthday, Nisha Ji! 🎉
           </h1>
           <div className="flex items-center justify-center gap-3 mb-8">
             <Heart className="text-primary animate-bounce-gentle" size={32} />
@@ -63,8 +63,9 @@ const HeroSection = () => {
         {/* Celebration message */}
         <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
           <p className="text-xl md:text-2xl font-inter text-muted-foreground mb-8 leading-relaxed">
-            Today is all about celebrating the amazing person you are! ✨<br />
-            May your day be filled with joy, laughter, and all your favorite things! 🌈
+            Aaj ka din bahut special hai, pehli baar mai aapke birthday ka hissa ban raha hu! ✨<br />
+            Isliye mai chahta hu ki meri special friend ke liye kuch special kiya jaaye! 🌈
+            Meri taraf se yeh chota sa gift, I hope aapko yeh acha lagega! 
           </p>
           
         </div>

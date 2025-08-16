@@ -56,23 +56,23 @@ const MessageSection = () => {
               <div className="text-6xl mb-4">🎂</div>
               
               <p className="text-lg md:text-xl font-inter leading-relaxed text-card-foreground">
-                <span className="font-semibold text-primary">Dear Nisha,</span>
+                <span className="font-semibold text-primary">Dear Nisha Ji,</span>
               </p>
               
               <p className="text-lg md:text-xl font-inter leading-relaxed text-card-foreground">
-                On this magical day, I want you to know how incredibly special you are! 
-                Your kindness, laughter, and wonderful spirit light up every room you enter. 
-                You have this amazing ability to make everyone around you feel loved and valued. ✨
+                Pehle toh mai yeh kehna chaahunga ki aap mere liye kitni special ho. Maine sapne mai bhi nahi socha tha ki mujhe aap jaisi itni achi friend milegi online. Aap bahut sweet aur pyaari ho. Pata nahi chala ki RP karte karte aapke saath ek special connection kaise ban gaya, yeh friendship mere liye bahut special hai. ✨
               </p>
               
               <p className="text-lg md:text-xl font-inter leading-relaxed text-card-foreground">
-                Thank you for being such an incredible friend! Your friendship means the world to me, 
-                and I feel so grateful to have someone as amazing as you in my life. 💖
+                Thank you for being such an amazing friend to me nisha ji. Aap mera safe space ho, aapse baat karke mera dil khush ho jaata hai. Ab toh kitne din ho gaye aapse baat kiye hue, mai bata nahi sakta ki mai aapko kitna miss kar raha hu. Jab bhi aapse baat karta hu na, mujhe bahut acha lagta hai.  💖
               </p>
               
               <p className="text-lg md:text-xl font-inter leading-relaxed text-card-foreground">
-                I hope this new year of your life brings you endless joy, amazing adventures, 
-                beautiful surprises, and all the happiness your heart can hold! 🌈
+                Aap mere liye ek inspiration ho nisha ji, aap kitna kuch handle karte ho. Family, Studies, Training aur mere saath RP karna, haha. Aap aage jaake bahut badi doctor banoge, bahut successful and bahut ameer. Phir merko adopt karke meri sugar mummy ban jana hehehe. Aap bahut hardworking or smart ho nisha ji, mujhe pata hai aap ekdum A1 doctor banogi. 🌈
+              </p>
+
+              <p className="text-lg md:text-xl font-inter leading-relaxed text-card-foreground">
+                I hope ki hum bahut time tak saath rahein aur baat karein. I know ki kisi din aapko jana hoga, but I hope ki mai aapko yaad rahu. Ki ek ajay naam ko koi ladka tha hehe. Mai aapko humesha yaad rakhunga nisha ji, as a good friend. Especially kabhi kabhi humari uhmmm... waisi waali baatein, I will always miss them 🌈
               </p>
               
               <div className="border-t border-primary/20 pt-6 mt-8">

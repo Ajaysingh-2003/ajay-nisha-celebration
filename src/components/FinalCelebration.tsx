@@ -75,13 +75,13 @@ const FinalCelebration = () => {
           
           <h1 className="font-dancing text-6xl md:text-8xl font-bold text-primary mb-6 leading-tight">
             Once Again,<br />
-            Happy Birthday Nisha! 🎊
+            Happy Birthday Nisha Ji! 🎊
           </h1>
           
           <div className="flex items-center justify-center gap-4 mb-8">
             <Heart className="text-accent animate-bounce-gentle" size={40} />
-            <p className="text-2xl md:text-3xl font-inter font-medium text-secondary">
-              You deserve all the happiness in the world!
+            <p className="text-2xl md:text-3xl font-inter font-medium text-primary">
+              Aapko iss duniya ki har khushi mile, mai yahi dua karta hu. I will always be someone you can trust, mai humesha aapka well wisher banke rahunga. Aur bhagwaan ne chaaha toh ek din hum zarur milenge nisha ji, mujhe aapko dekhne ka bahut mann hai!
             </p>
             <Heart className="text-accent animate-bounce-gentle" size={40} />
           </div>
@@ -103,29 +103,25 @@ const FinalCelebration = () => {
                 <div className="space-y-3">
                   <p className="flex items-start gap-3 text-card-foreground">
                     <span className="text-xl">🌟</span>
-                    <span>May every day sparkle with joy and laughter</span>
+                    <span>Aapka har din khushi se bhara ho</span>
                   </p>
                   <p className="flex items-start gap-3 text-card-foreground">
                     <span className="text-xl">🌈</span>
-                    <span>May your dreams come true in the most beautiful ways</span>
+                    <span>Aapke saare sapne sach ho aur aapko sab kuch mile</span>
                   </p>
                   <p className="flex items-start gap-3 text-card-foreground">
                     <span className="text-xl">💎</span>
-                    <span>May you always shine as bright as you do</span>
+                    <span>Aap apne parents ko bhaut proud karoge</span>
                   </p>
                 </div>
                 <div className="space-y-3">
                   <p className="flex items-start gap-3 text-card-foreground">
                     <span className="text-xl">🦋</span>
-                    <span>May new adventures and opportunities find you</span>
+                    <span>Aapko ek bahut acha ladka milega (mujhese acha toh nahi hehe)</span>
                   </p>
                   <p className="flex items-start gap-3 text-card-foreground">
                     <span className="text-xl">💝</span>
-                    <span>May love and friendship surround you always</span>
-                  </p>
-                  <p className="flex items-start gap-3 text-card-foreground">
-                    <span className="text-xl">🌺</span>
-                    <span>May this new year bloom with endless possibilities</span>
+                    <span>Aap independent aur strong bane raho humesha, aur koi bhi aira gaira aapko sad na karein</span>
                   </p>
                 </div>
               </div>
@@ -154,10 +150,10 @@ const FinalCelebration = () => {
         <div className="mt-16 animate-slide-up" style={{ animationDelay: '0.9s' }}>
           <div className="border-t-2 border-primary/30 pt-8 max-w-lg mx-auto">
             <p className="text-xl font-dancing text-primary font-semibold mb-2">
-              With endless love and warmest wishes,
+              Ye tha meri taraf se ek chota sa gift, I hope aapko acha laga ho.
             </p>
             <p className="text-2xl font-dancing text-accent font-bold">
-              Your friend Ajay 💕
+              Aapke chote dost ki taraf se: Ajay 💕
             </p>
             <div className="flex justify-center gap-3 mt-4">
               {['💖', '🎂', '🎈', '✨', '🌟'].map((emoji, index) => (
