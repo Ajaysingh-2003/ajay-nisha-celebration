@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import HeroSection from '@/components/HeroSection';
-import PhotoGallery from '@/components/PhotoGallery';
 import MessageSection from '@/components/MessageSection';
-import InteractiveSection from '@/components/InteractiveSection';
 import FinalCelebration from '@/components/FinalCelebration';
 
 const Index = () => {
@@ -17,9 +15,7 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <HeroSection />
-      <PhotoGallery />
       <MessageSection />
-      <InteractiveSection />
       <FinalCelebration />
     </div>
   );

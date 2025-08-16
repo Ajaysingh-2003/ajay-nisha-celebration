@@ -161,21 +161,6 @@ const FinalCelebration = () => {
           </div>
         </div>
 
-        {/* Interactive celebration button */}
-        <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
-          <button
-            onClick={triggerCelebration}
-            className={`celebration-button text-xl py-6 px-12 ${showFireworks ? 'animate-glow-pulse' : ''}`}
-          >
-            <Sparkles className="mr-3" size={28} />
-            🎊 CELEBRATE NISHA! 🎊
-            <Sparkles className="ml-3" size={28} />
-          </button>
-          
-          <p className="mt-6 text-muted-foreground font-inter text-lg">
-            Click above for a special surprise! ✨
-          </p>
-        </div>
 
         {/* Final signature */}
         <div className="mt-16 animate-slide-up" style={{ animationDelay: '0.9s' }}>
