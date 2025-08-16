@@ -11,23 +11,6 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen bg-gradient-hero relative overflow-hidden flex items-center justify-center px-4">
-      {/* Floating decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(12)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 6}s`,
-              fontSize: `${1.5 + Math.random() * 2}rem`,
-            }}
-          >
-            {['🎈', '🎊', '✨', '💫', '🌟', '🎁'][Math.floor(Math.random() * 6)]}
-          </div>
-        ))}
-      </div>
 
       {/* Confetti animation */}
       {showConfetti && (

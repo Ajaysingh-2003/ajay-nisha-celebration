@@ -11,7 +11,7 @@ const FinalCelebration = () => {
     setCelebrationClicked(true);
     
     // Reset fireworks after animation
-    setTimeout(() => setShowFireworks(false), 3000);
+    setTimeout(() => setShowFireworks(false), 5000);
   };
 
   // Auto-trigger celebration when section comes into view
@@ -38,61 +38,33 @@ const FinalCelebration = () => {
       id="final-celebration"
       className="py-24 bg-gradient-sunset relative overflow-hidden min-h-screen flex items-center"
     >
-      {/* Fireworks/Confetti explosion */}
+      {/* Flying emoji blast */}
       {showFireworks && (
         <div className="absolute inset-0 pointer-events-none z-20">
-          {/* Large confetti pieces */}
-          {[...Array(100)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute animate-confetti"
-              style={{
-                left: `${Math.random() * 100}%`,
-                width: `${4 + Math.random() * 8}px`,
-                height: `${4 + Math.random() * 8}px`,
-                backgroundColor: ['#ff69b4', '#87ceeb', '#ffd700', '#dda0dd', '#98fb98', '#ff6347'][Math.floor(Math.random() * 6)],
-                animationDelay: `${Math.random() * 0.5}s`,
-                animationDuration: `${2 + Math.random() * 2}s`,
-                borderRadius: Math.random() > 0.5 ? '50%' : '2px',
-              }}
-            />
-          ))}
-          
-          {/* Sparkle effects */}
-          {[...Array(30)].map((_, i) => (
-            <div
-              key={`sparkle-${i}`}
-              className="absolute text-yellow-400 animate-sparkle"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                fontSize: `${1 + Math.random() * 2}rem`,
-                animationDelay: `${Math.random() * 2}s`,
-              }}
-            >
-              ✨
-            </div>
-          ))}
+          {/* Flying emojis */}
+          {[...Array(80)].map((_, i) => {
+            const randomX = (Math.random() - 0.5) * 800;
+            const randomY = -(Math.random() * 400 + 100);
+            return (
+              <div
+                key={i}
+                className="absolute animate-emoji-blast text-4xl"
+                style={{
+                  left: `${40 + Math.random() * 20}%`,
+                  top: `${40 + Math.random() * 20}%`,
+                  animationDelay: `${Math.random() * 0.5}s`,
+                  animationDuration: `5s`,
+                  '--emoji-x': `${randomX}px`,
+                  '--emoji-y': `${randomY}px`,
+                } as React.CSSProperties}
+              >
+                {['🎈', '💖', '🎂', '⭐', '🌟', '✨', '🎊', '🎉', '💫', '🎁'][Math.floor(Math.random() * 10)]}
+              </div>
+            );
+          })}
         </div>
       )}
 
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 8}s`,
-              fontSize: `${2 + Math.random() * 2}rem`,
-            }}
-          >
-            {['🎊', '🎉', '💫', '🌟', '💖', '🎈'][Math.floor(Math.random() * 6)]}
-          </div>
-        ))}
-      </div>
 
       <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
         {/* Main celebration message */}
@@ -159,6 +131,22 @@ const FinalCelebration = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Celebrate Nisha button */}
+        <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
+          <button
+            onClick={triggerCelebration}
+            className={`celebration-button text-xl py-6 px-12 ${showFireworks ? 'animate-glow-pulse' : ''}`}
+          >
+            <Sparkles className="mr-3" size={28} />
+            🎊 CELEBRATE NISHA! 🎊
+            <Sparkles className="ml-3" size={28} />
+          </button>
+          
+          <p className="mt-6 text-muted-foreground font-inter text-lg">
+            Click above for a special surprise! ✨
+          </p>
         </div>
 
 

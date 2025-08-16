@@ -177,6 +177,24 @@
     50% { transform: translateX(10px) rotate(2deg); }
   }
 
+  @keyframes emoji-blast {
+    0% { 
+      transform: translate(0, 0) scale(0.5);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+    90% {
+      opacity: 1;
+    }
+    100% { 
+      transform: translate(var(--emoji-x, 200px), var(--emoji-y, -200px)) scale(0.8) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
   /* Animation utility classes */
   .animate-float { animation: float 6s ease-in-out infinite; }
   .animate-bounce-gentle { animation: bounce-gentle 2s ease-in-out infinite; }
@@ -185,6 +203,11 @@
   .animate-glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
   .animate-slide-up { animation: slide-up 0.8s ease-out; }
   .animate-balloon-sway { animation: balloon-sway 4s ease-in-out infinite; }
+  .animate-emoji-blast { 
+    animation: emoji-blast 5s ease-out forwards;
+    --emoji-x: calc(var(--random-x, 0.5) * 400px - 200px);
+    --emoji-y: calc(var(--random-y, 0.5) * -300px - 100px);
+  }
 
   /* Gradient backgrounds */
   .bg-gradient-hero { background: var(--gradient-hero); }
