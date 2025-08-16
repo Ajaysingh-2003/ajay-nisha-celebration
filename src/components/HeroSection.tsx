@@ -84,13 +84,6 @@ const HeroSection = () => {
             May your day be filled with joy, laughter, and all your favorite things! 🌈
           </p>
           
-          <button className="celebration-button group">
-            <span className="flex items-center gap-3">
-              <Sparkles className="group-hover:animate-sparkle" size={24} />
-              Let's Celebrate! 🎊
-              <Sparkles className="group-hover:animate-sparkle" size={24} />
-            </span>
-          </button>
         </div>
       </div>
     </section>
