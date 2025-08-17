@@ -18,6 +18,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // 👇 Important for GitHub Pages
-  base: "/ajay-nisha-celebration/",
+  // ✅ Important for Vercel: no base config needed
+  build: {
+    outDir: "dist",
+    sourcemap: false, // you can set true if debugging build
+  }
 }));

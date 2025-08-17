@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ajaysingh-2003.github.io/ajay-nisha-celebration/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
